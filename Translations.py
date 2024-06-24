@@ -10,8 +10,10 @@ def textTranslation(textFile, inputLocation, outputDestination):
     outputPath = os.path.join(outputDestination, f"{Path(textFile).stem}_translated.txt")
     
     try:
+        ## set to brazillian portuguese 
         translate =  GoogleTranslator(source='auto', target='pt')
         with open(inputPath, "r") as file:
+            #file that is read is saved as text for next process 
             text = file.read()
             translated_text =translate.translate(text)
         with open(outputPath, "w") as translated:

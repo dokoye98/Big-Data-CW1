@@ -1,22 +1,27 @@
 import spacy,nltk
 from nrclex import NRCLex
 nlp = spacy.load('en_core_web_sm')
-
 import os
 from pathlib import Path
 import threading
 import time
+
+
+
 def setUp():
+    ##limit function calls when running unrelated methods 
     nltk.download('punkt')
 def emotionExtract(textFile, inputLocation,outputDestination):
     inputPath = os.path.join(inputLocation, textFile)
     outputPath = os.path.join(outputDestination, f"{Path(textFile).stem}_translated.txt")
     try:
+        ##encoding for ust to be careful
         with open(inputPath,"r",encoding="utf-8") as file:
             text = file.read()
         emotion = NRCLex(text)
         with open(outputPath,"w",encoding="utf-8") as feelings:
             feelings.write(f"Feelings for {textFile}\n")
+            ##instead of writing emotions.affect_frequencies iterate for readability 
             for emotions, freq in emotion.affect_frequencies.items():
                 feelings.write(f"{emotions}: {freq}\n")
         print(f"Feeling extraction for {textFile} complete")

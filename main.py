@@ -12,12 +12,12 @@ from Translations import translationRunner
 def main():
 
     bigStartTime = time.perf_counter()
-    #print("Download Starting\n")
-    #downloadRunner()
-    #print("\nAudio extraction Starting\n")
-    #audioRunner()
-    #print("\ntranscription Starting\n")
-    #transcritpRunner()
+    print("Download Starting\n")
+    downloadRunner()
+    print("\nAudio extraction Starting\n")
+    audioRunner()
+    print("\ntranscription Starting\n")
+    transcritpRunner()
     print("\ntranslation Starting\n")
     translationRunner()
     print("\nfeeling checks Starting\n")

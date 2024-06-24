@@ -3,7 +3,7 @@ import speech_recognition as sr
 from pathlib import Path
 import multiprocessing 
 import time
-from concurrent.futures import ThreadPoolExecutor
+
 
 
 

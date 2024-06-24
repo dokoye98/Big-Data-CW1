@@ -23,6 +23,7 @@ def parallel(urls):
     def wrapper(url,proType,outputLocation):
         with semaphore:
             download(url,proType,outputLocation)
+    ##the process of looping for an unspecified item  = time and space O(n)
     for url in urls:
         thread = threading.Thread(target=wrapper,args=(url,"Parallel","parVids"))
         threads.append(thread)
@@ -34,7 +35,7 @@ def parallel(urls):
 
 
 def serial(urls):
-    
+    ##time is is O(n) as it has to go through the entire urls list but O(1) as only one item is access at a time
        for url in urls:
             download(url,"Serial","serVids")
 
