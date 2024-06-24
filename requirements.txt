@@ -3,15 +3,10 @@ SpeechRecognition
 spacy
 nltk
 nrclex
-path
 textblob
 deep-translator
-time
-concurrent
-asyncio
 pandas
 openai-whisper 
-ffmpeg  
-en_core_web_sm     
+ffmpeg
 pytube
 soundfile
