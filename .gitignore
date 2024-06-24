@@ -1,4 +1,12 @@
 myenv
 video_output
-par_vids
-ser_vids
+parVids
+serVids
+parAudio
+serAudio
+serText
+parText
+parTranslate
+model
+report
+cw1
