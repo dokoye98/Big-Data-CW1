@@ -5,9 +5,6 @@ import multiprocessing
 import time
 
 
-
-
-
 def wavTranscription(wavFile, textDestination,wavDestination):
     recognizer = sr.Recognizer()
     wavPath = os.path.join(wavDestination,wavFile)
